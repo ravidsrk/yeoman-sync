@@ -44,6 +44,6 @@
     "bluebird": "^3.5.0",
     "fs-extra": "^4.0.1",
     "nodegit": "^0.18.3",
-    "replace": "^0.3.0"
+    "replace": "git+https://github.com/yogeshgadge/replace.git"
   }
 }
