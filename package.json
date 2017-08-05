@@ -43,6 +43,7 @@
   "dependencies": {
     "bluebird": "^3.5.0",
     "fs-extra": "^4.0.1",
+    "jsonfile": "^3.0.1",
     "nodegit": "^0.18.3",
     "path": "^0.12.7",
     "replace": "git+https://github.com/yogeshgadge/replace.git"
