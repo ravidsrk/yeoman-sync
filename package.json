@@ -1,0 +1,49 @@
+{
+  "name": "yeoman-sync",
+  "version": "0.0.0",
+  "description": "Yeoman generator templates sync.",
+  "homepage": "https://github.com/androidstarters/yeoman-sync",
+  "author": {
+    "name": "Ravindra Kumar",
+    "email": "ravidsrk@gmail.com",
+    "url": "https://github.com/androidstarters"
+  },
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "keywords": [
+    "yeoman",
+    "sync"
+  ],
+  "devDependencies": {
+    "nsp": "^2.6.3",
+    "eslint": "^4.1.0",
+    "eslint-config-xo-space": "^0.16.0",
+    "jest": "^19.0.2",
+    "jest-cli": "^20.0.0"
+  },
+  "scripts": {
+    "prepublish": "nsp check",
+    "pretest": "eslint . --fix",
+    "test": "jest"
+  },
+  "eslintConfig": {
+    "extends": "xo-space",
+    "env": {
+      "jest": true,
+      "node": true
+    }
+  },
+  "repository": "androidstarters/yeoman-sync",
+  "jest": {
+    "testEnvironment": "node"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^3.5.0",
+    "fs-extra": "^4.0.1",
+    "nodegit": "^0.18.3",
+    "replace": "^0.3.0"
+  }
+}
