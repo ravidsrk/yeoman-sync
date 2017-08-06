@@ -1,6 +1,7 @@
+var each = require('async-each');
 const yeomanSync = require('./lib/index.js');
 
-let config = {
+let configs = [{
   destination: 'androidstarters-java',
   rename: [{
     dest: 'gitignore',
@@ -17,6 +18,25 @@ let config = {
     branchName: 'develop',
     url: 'https://github.com/androidstarters/android-starter.git'
   }
-};
+}, {
+  destination: 'androidstarters-kotlin',
+  rename: [{
+    dest: 'gitignore',
+    src: '.gitignore'
+  }, {
+    dest: 'app/gitignore',
+    src: 'app/.gitignore'
+  }],
+  replace: [{
+    regex: 'io.mvpstarter.sample',
+    replacement: '<%= appPackage %>'
+  }],
+  repo: {
+    branchName: 'develop',
+    url: 'https://github.com/androidstarters/kotlin-android-starter.git'
+  }
+}];
 
-yeomanSync(config);
+each(configs, yeomanSync, function() {
+  console.log('Contents for a, b and c:');
+});
